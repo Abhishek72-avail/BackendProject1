@@ -1,8 +1,10 @@
-import {Routes} from 'express';
-import { register } from 'module';
+import { Router } from 'express';
+import { registerUser } from './path/to/your/controller'; // Adjust the import path as needed
 
-const router = Routes();
+const router = Router();
 
-router.router('/register') .post (registerUser) 
-// router.router('/login') .post (loginUser) 
+router.route('/register').post(registerUser);
+// Uncomment the following line if you need the login route
+// router.route('/login').post(loginUser);
+
 export default router;
